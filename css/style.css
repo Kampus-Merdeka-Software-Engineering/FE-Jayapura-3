@@ -90,6 +90,7 @@ h1 {
 
 .icon :hover {
     color: #fbcd17;
+    cursor: pointer;
 }
 
 .menu {
@@ -321,7 +322,6 @@ h1 {
 .special .recommendations {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
 }
 
 .special-product {
@@ -329,9 +329,14 @@ h1 {
     white-space: nowrap;
 }
 
+.special .recommendations .special-product {
+    overflow-x: auto;
+    scroll-snap-type: inline mandatory;
+    position: relative;
+}
+
 .special .recommendations .product-item {
     display: inline-block;
-    margin-right: 15px;
 }
 
 .special-product .h2{
@@ -357,7 +362,7 @@ h1 {
 }
 
 .img-app {
-    height: 400px;
+    height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -367,10 +372,10 @@ h1 {
 }
 
 .special .section-title {
-    margin-block: 30px;
+    margin-block: 20px;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .special .section-title .text {
