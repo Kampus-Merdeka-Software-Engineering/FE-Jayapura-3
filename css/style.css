@@ -547,3 +547,71 @@ input[type="checkbox"] {
     scroll-snap-type: inline mandatory;
     position: relative;
 }
+
+/* detail-product */
+
+.detail-product{
+    padding-top: 90px;
+}
+
+.btn-back{
+    margin-left: 20px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #6450B6;
+    border-radius: 5px;
+}
+
+.product-image {
+    border: 2px solid black;
+    margin: 20px ;
+}
+
+.product-details h1{
+    margin-bottom: 20px;
+}
+
+.product-details p{
+    margin-bottom: 20px;
+}
+
+.product-details select{
+    width: 130px;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.con-btn {
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.con-input-btns button{
+    width: 30px;
+    height: 30px;
+    background-color: #6450B6;
+    color: white;
+    border-radius: 5px;
+}
+
+.con-input-btns input {
+    width:100px ;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.add {
+    width: 150px;
+    height: 40px;
+    background-color: #6450B6;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}

@@ -12,3 +12,18 @@ function toggleIcon(iconId, currentClass, newClass, newColor) {
         icon.style.color = "#ff0000"; 
     }
 }
+
+function plusLess(event, action) {
+    event.preventDefault();
+    var quantityInput = document.getElementById("quantity");
+    var quantity = parseInt(quantityInput.value);
+
+    if (action === "plus") {
+        quantity++;
+    } else if (action === "less" && quantity > 1) {
+        quantity--;
+    }
+
+    quantityInput.value = quantity;
+}
+
