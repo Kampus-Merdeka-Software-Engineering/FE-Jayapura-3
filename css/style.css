@@ -55,6 +55,8 @@ h1 {
     font-size: 30px;
 }
 
+/* CSS index.html */
+
 /* HEADER */
 .header {
     height: 70px;
@@ -90,6 +92,7 @@ h1 {
 
 .icon :hover {
     color: #fbcd17;
+    cursor: pointer;
 }
 
 .menu {
@@ -321,7 +324,6 @@ h1 {
 .special .recommendations {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
 }
 
 .special-product {
@@ -329,9 +331,14 @@ h1 {
     white-space: nowrap;
 }
 
+.special .recommendations .special-product {
+    overflow-x: auto;
+    scroll-snap-type: inline mandatory;
+    position: relative;
+}
+
 .special .recommendations .product-item {
     display: inline-block;
-    margin-right: 15px;
 }
 
 .special-product .h2{
@@ -357,7 +364,7 @@ h1 {
 }
 
 .img-app {
-    height: 400px;
+    height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -367,10 +374,10 @@ h1 {
 }
 
 .special .section-title {
-    margin-block: 30px;
+    margin-block: 20px;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .special .section-title .text {
@@ -479,4 +486,64 @@ th {
     margin-left: 50px;
     margin-right: 50px;
     color: black;
+}
+
+
+/* CSS product.html */
+
+/* sidebar page product  */
+
+.product-container{
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding-top: 90px;
+    flex: 1; 
+}
+
+.content {
+    flex: 3;
+    padding: 20px;
+    padding-top: 90px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.filter-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.list-product2 ul{
+    margin: 0 10px;
+    display: flex;
+    padding-bottom: 20px;
+    scroll-snap-type: inline mandatory;
+    position: relative;
 }
