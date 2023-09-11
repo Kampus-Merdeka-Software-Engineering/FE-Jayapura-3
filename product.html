@@ -20,8 +20,8 @@
         <h1>Walkwise. Co</h1>
         <div>
             <nav class="menu">
-                <a href="index.html" class="active">Home</a>
-                <a href="product.html">Product</a>
+                <a href="#" class="active">Home</a>
+                <a href="#">Product</a>
                 <a href="#">Contact</a>
                 <a href="#">About</a>
                 <!-- search -->
@@ -29,22 +29,215 @@
                     <input type="text" placeholder="Search for shoes">
                     <a class="icon" href="#"><i class="fa-solid fa-magnifying-glass"></i></i></i></a>
                 </div>
-
                 <span class="vertical-divider"></span>
-
                 <a class="icon" href="#"><i class="fa-regular fa-heart"></i></a>
                 <a class="icon" href="#"><i class="fa-solid fa-shopping-cart"></i></a>
                 <a class="icon" href="#"><i class="fa-regular fa-user"></i></a>
             </nav>
         </div>
     </header>
+    <!-- sidebar -->
+    <div class="product-container">
+        <aside class="sidebar">
+            <h2>Filter Sepatu</h2>
+            <div class="filter-section">
+                <h3>Jenis Sepatu</h3>
+                <ul>
+                    <li><label><input type="checkbox"> Sneakers</label></li>
+                    <li><label><input type="checkbox"> Sandal</label></li>
+                    <li><label><input type="checkbox"> Boots</label></li>
+                    <!-- Tambahkan jenis sepatu lainnya sesuai kebutuhan -->
+                </ul>
+            </div>
+            <div class="filter-section">
+                <h3>Gender</h3>
+                <ul>
+                    <li><label><input type="radio" name="gender"> Pria</label></li>
+                    <li><label><input type="radio" name="gender"> Wanita</label></li>
+                    <!-- Tambahkan gender lainnya sesuai kebutuhan -->
+                </ul>
+            </div>
+            <div class="filter-section">
+                <h3>Brand</h3>
+                <ul>
+                    <li><label><input type="checkbox"> Nike</label></li>
+                    <li><label><input type="checkbox"> Adidas</label></li>
+                    <li><label><input type="checkbox"> Puma</label></li>
+                    <!-- Tambahkan brand lainnya sesuai kebutuhan -->
+                </ul>
+            </div>
+            <div class="filter-section">
+                <h3>Size</h3>
+                <ul>
+                    <li><label><input type="checkbox"> 38</label></li>
+                    <li><label><input type="checkbox"> 39</label></li>
+                    <li><label><input type="checkbox"> 40</label></li>
+                    <!-- Tambahkan ukuran lainnya sesuai kebutuhan -->
+                </ul>
+            </div>
+        </aside>
 
-    <!--sidebar category-->
-    <div class="slidebar-category">
-        <a href="#" class="slidebar-item">Sports</a>
-        <a href="#" class="slidebar-item">Daily</a>
-        <a href="#" class="slidebar-item">Sneakers</a>  
+        <main class="content">
+            <section class="list-product2">
+                <ul>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/product-1.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p> Nike Air Max</p>
+                                        <h4>Running Sneaker Shoes</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon1', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon1" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="#"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/product-2.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p> Nike Air Max</p>
+                                        <h4>Leather Mens Slipper</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon2', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon2" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="#"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/product-3.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p> Nike Air Max</p>
+                                        <h4>Simple Fabric Shoe</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon3', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon3" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="#"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/product-4.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p> Nike Air Max</p>
+                                        <h4>Air Jordan 7 Retro</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon4', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon4" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="#"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/product-5.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p> Nike Air Max</p>
+                                        <h4>Nike Air Max 270 SE</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon5', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon5" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="#"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/product-6.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p> Adidas Air Max</p>
+                                        <h4>Adidas Sneakers Shoes</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon6', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon6" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="#"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/product-7.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p> Nike Air Max</p>
+                                        <h4>Nike Basketball shoes</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon7', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon7" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="#"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/product-8.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p> Nike Air Max</p>
+                                        <h4>Simple Fabric Shoe</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon8', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon8" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="#"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
     </div>
-
 </body>
+
 </html>
