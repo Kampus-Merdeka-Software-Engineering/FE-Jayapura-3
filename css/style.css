@@ -120,6 +120,7 @@ h1 {
   outline: none;
   background: none;
   width: 120px;
+  height: 15px;
 }
 
 .search-box a {
@@ -620,7 +621,7 @@ input[type="checkbox"] {
 }
 
 /* Contact */
-main {
+.main {
   display: flex;
   justify-content: center;
   padding: 150px;
