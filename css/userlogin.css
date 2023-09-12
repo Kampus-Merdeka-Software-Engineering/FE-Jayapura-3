@@ -360,7 +360,7 @@ a{
 }
 
 .userlogin.sign-up-mode form.sign-in-form{
-    opacity: 1;
+    opacity: 0;
 }
 
 .userlogin.sign-up-mode form.sign-up-form{
