@@ -235,7 +235,7 @@ form.sign-up-form{
 .btn{
     width: 150px;
     height: 40px;
-    border: none;
+    border: 1px solid black;
     border-radius: 50px;
     background: #a5aaaf;
     color: black;
