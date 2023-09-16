@@ -299,7 +299,7 @@ h1 {
 
 .card-image :hover {
   position: absolute;
-  transform: translate(10px, 20px);
+  transform: scale(1.2);
   z-index: 20;
 }
 
@@ -506,7 +506,7 @@ th {
 }
 
 .content {
-  flex: 3;
+  flex: 10;
   padding: 20px;
   padding-top: 90px;
 }
@@ -523,7 +523,7 @@ h2 {
 
 .filter-section input{
   width: 30px;
-  height: 15px;
+  height: 10px;
 }
 
 ul {
