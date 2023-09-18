@@ -620,6 +620,40 @@ input[type="checkbox"] {
   font-weight: bold;
 }
 
+/* Rating */
+.product-reviews{
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+h2{
+  text-align: center;
+}
+
+.reviews{
+  border: #a5aaaf 1px solid;
+  padding: 5px 5px 5px 5px;
+}
+
+.user{
+  display: flex;
+}
+
+.avatar{
+  width: 30px;
+  border-radius: 50px;
+}
+
+.reviewer{
+  text-align: center;
+  margin: 10px 10px 5px ;
+}
+
+.star{
+  color: gold;
+}
+
 /* Contact */
 .main {
   display: flex;
