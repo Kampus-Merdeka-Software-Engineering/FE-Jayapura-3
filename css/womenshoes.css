@@ -269,7 +269,7 @@
   
   .card-image :hover {
     position: absolute;
-    transform: translate(10px, 20px);
+    transform: scale(1.2);
     z-index: 20;
   }
   
