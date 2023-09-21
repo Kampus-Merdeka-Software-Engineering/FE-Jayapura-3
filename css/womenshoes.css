@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 2;
     text-decoration: none;
     list-style: none;
     font-family: "poppins", sans-serif;
@@ -9,11 +9,11 @@
 
   
   .shadow {
-    box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 100px 0px rgba(15, 13, 1, 0.414);
   }
   
   .border-radius {
-    border-radius: 10px;
+    border-radius: 0px;
   }
   
   .poster {
@@ -30,24 +30,25 @@
   .header {
     height: 70px;
     width: 100%;
-    background-color: rgb(255, 195, 195);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position:fixed;
     z-index: 100;
   }
   
-  .header a img {
-    width: 50px;
+  .header h1 {
+    padding: 10px;
   }
-  
+ 
   .menu a {
     color: #000000;
     font-weight: bold;
     padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 50px;
+    align-items: center;
   }
   
   .menu a:hover {
@@ -77,11 +78,12 @@
   /*Search-box*/
   
   .search-box {
-    background-color: rgba(241, 238, 241, 0.801);
+    background-color: rgba(11, 10, 11, 0.071);
     height: 30px;
     width: auto;
     padding: 5px 10px;
     border-radius: 50px;
+    justify-content: center;
   }
   
   .search-box input {
@@ -183,7 +185,7 @@
   }
   
   .btn span:hover {
-    background-color: rgba(228, 226, 226, 0.589);
+    background-color: rgba(228, 226, 226, 0);
   }
   
   /* product */
@@ -223,18 +225,18 @@
     box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
     padding: 15px;
     border-radius: 35px;
-    width: 260px;
-    min-width: 260px;
+    width: 200px;
+    min-width: 210px;
     position: relative;
     margin: 0px 15px;
     background: rgb(255, 255, 255);
     scroll-snap-align: center;
     transition: all 0.25s ease;
-    border: 2px solid rgb(112, 1, 1);
+    border: 2px solid #363636;
   }
   
   .add-active {
-    box-shadow: 0px 10px 30px 0px rgba(254, 160, 26, 0.2);
+    box-shadow: 0px 10px 30px 0px rgba(21, 21, 21, 0.2);
     border: 2px solid #fea01a;
   }
   
@@ -251,17 +253,16 @@
   }
   
   .card-image {
-    width: 100%;
+    width:auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 200px;
+    height: 170px;
     border-radius: 30px;
-    background: hsla(0, 100%, 96%, 0);
   }
   
   .card-image img {
-    width: 200px;
+    width: 160px;
     z-index: index 0;
     transition: all 0.25s ease;
   }
@@ -283,7 +284,10 @@
     padding: 5px 0px;
   }
   
- 
+  .img {
+    margin-bottom: auto;
+  }
+
   .img-app {
     height: 420px;
     display: flex;
@@ -313,7 +317,7 @@
   /* footer */
   
   .footer-brand {
-    background-color: #fdb4b4;
+    background-color: #d3d3d3;
     width: 100%;
     height: 80px;
     display: flex;
