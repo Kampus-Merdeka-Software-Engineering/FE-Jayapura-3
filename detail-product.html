@@ -12,6 +12,7 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="js/script.js"></script>
+    <script src="js/detail-product.js"></script>
 </head>
 
 <body>
@@ -42,49 +43,10 @@
             </a>
             Back
         </button>
-        <table>
-            <tr>
-                <td>
-                    <div class="product-image">
-                        <img src="images/product-1.png" alt="Sepatu">
-                    </div>
-                </td>
-                <td>
-                    <div class="product-details">
-                        <h1>Running Sneaker Shoes</h1>
-                        <p>Deskripsi Produk: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod
-                            libero
-                            eu
-                            orci bibendum, a fermentum libero scelerisque.</p>
-                        <p>Harga: $99.99</p>
-                        <label for="size">Ukuran:</label>
-                        <select id="size">
-                            <option value="36">36</option>
-                            <option value="37">37</option>
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="40">41</option>
-                            <option value="40">42</option>
-                            <option value="40">43</option>
-                        </select>
-                        <label for="quantity">Jumlah:</label>
-                        <div class="con-btn">
-                            <div class="con-input-btns">
-                                <button onclick="plusLess(event,'less')" class="less">
-                                    <i class="fa-solid fa-minus"></i>
-                                </button>
-                                <input type="text" id="quantity" value="1">
-                                <button onclick="plusLess(event,'plus')" class="plus">
-                                    <i class="fa-solid fa-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <button class="add">Add to Cart</button>
-                    </div>
-                </td>
-            </tr>
-        </table>
+        <div id="productContainer">
+            
+        </div>
+
     </div>
     <div class="product-reviews">
         <h2>Ulasan Produk</h2>

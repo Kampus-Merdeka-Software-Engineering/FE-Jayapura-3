@@ -48,9 +48,6 @@ const products = [
     description: "Simple Fabric Shoe",
     image: "images/product-8.png",
   },
-];
-
-const special = [
   {
     id: 9,
     name: "Nike Air Max",
@@ -108,15 +105,6 @@ function addProductsToPage() {
   products.forEach((product) => {
     const productCard = createProductCard(product);
     productList.appendChild(productCard);
-  });
-
-  const specialList = document.querySelector(".product-special");
-  special.forEach((product) => {
-    const productCard = createProductCard(product);
-    const listItem = document.createElement("li");
-    listItem.classList.add("product-item");
-    listItem.appendChild(productCard);
-    specialList.appendChild(listItem);
   });
 }
 

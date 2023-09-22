@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walkwise. Co</title>
     <!-- eksternal css -->
@@ -11,14 +10,10 @@
     <script src="https://kit.fontawesome.com/f295ae19df.js" crossorigin="anonymous"></script>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/list-product.js"></script>
+    <script src="favorit.js"></script>
 </head>
-
 <body>
-    <!-- header -->
-    <header class="header container shadow border-radius">
+	<header class="header container shadow border-radius">
         <h1>Walkwise. Co</h1>
         <div>
             <nav class="menu">
@@ -34,124 +29,21 @@
 
                 <span class="vertical-divider"></span>
 
-                <a class="icon" href="favorit.html"><i class="fa-regular fa-heart"></i></a>
+                <a class="icon" href="#"><i class="fa-regular fa-heart"></i></a>
                 <a class="icon" href="#"><i class="fa-solid fa-shopping-cart"></i></a>
                 <a class="icon" href="userlogin.html"><i class="fa-regular fa-user"></i></a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <article>
+    <div class="content container">
+    <h2>Produk Favorit</h2>
+	<ul class="favorite-list">
+	  <!-- Produk favorit akan ditampilkan di sini -->
+	</ul>
+	</div>
 
-            <!-- Bar -->
-
-            <section class="bar" style="background-image: url('images/hero-banner.jpg')">
-                <div class="container product section">
-
-                    <h1 class="h1 bar-title">
-                        Welcome to Walkwise. Co
-                    </h1>
-
-                    <p class="bar-text" style="color: white;">
-                        Find your perfect pair of shoes.
-                    </p>
-
-                    <button class="shop-now">
-                        Shop Now
-                        <a class="icon" href="product.html"><i class="fa-solid fa-arrow-right"></i></a>
-                    </button>
-                </div>
-            </section>
-
-            <!-- Collection -->
-            <div class="container product">
-            <section class="collection">
-
-                    <ul class="has-scrollbar">
-
-                        <li>
-                            <div class="collection-card" style="background-image: url('images/Men_collections.png')">
-                                <h3 class="h4 card-title">Men Collections</h3>
-
-                                <a href="#" class="btn btn-secondary">
-                                    <span>View All</span>
-
-                                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="collection-card" style="background-image: url('images/Sports_collections.png')">
-                                <h3 class="h4 card-title">Sports Collections</h3>
-
-                                <a href="#" class="btn btn-secondary">
-                                    <span>View All</span>
-
-                                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="collection-card" style="background-image: url('images/Women_collections.png')">
-                                <h3 class="h4 card-title">Women Collections</h3>
-                                <a href="womenshoes.html" class="btn btn-secondary">
-                                    <span>View All</span>
-                                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>  
-            </section>
-                <h1>
-                    Featured Product
-                </h1>
-                <p>
-                    Check out or latest arrivals
-                </p>
-                <button class="btn-All">
-                    View All Product
-                </button>
-           </div>
-
-            <!-- card Product -->
-            <ul class="list-product">
-                <!-- Di sini akan ditambahkan elemen card produk oleh JavaScript -->
-            </ul>
-
-            <section class="bar" style="background-image: url('images/section.jpg')">
-                <div class="container poster">
-                    <h1 class="h1 bar-title">
-                        Make Yourself
-                    </h1>
-                    <h2 class="bar-title">
-                        Feel Comfy
-                    </h2>
-                    <button class="shop-now">
-                        Shop Now
-                        <a class="icon" href="#"><i class="fa-solid fa-arrow-right"></i></a>
-                    </button>
-                </div>
-            </section>
-            <!-- recommendations -->
-            <section class="special">
-                <div class="recommendations">
-                    <div class="special_bannner">
-                        <img src="images/product-13.jpg" alt="" class="img-app">
-                    </div>
-                    <div class="special-product">
-                        <h2 class="h2 section-title">
-                            <span class="text">RECOMMENDATIONS FOR YOU</span>
-                        </h2>
-                        <ul class="product-special">
-                          <!-- Produk akan ditambahkan di sini oleh JavaScript -->
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <footer class="footer">
+    <footer class="footer">
                 <div class="footer-top">
                     <div class="footer-brand">
                         <h1>Walkwise. Co</h1>
