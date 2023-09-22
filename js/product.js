@@ -77,7 +77,7 @@ const products = [
 // Function untuk membuat daftar produk dalam bentuk card
 function createProductCard(product) {
   const card = document.createElement("div");
-  card.classList.add("card");
+  card.classList.add("card2");
   card.innerHTML = `
     <div class="add-actives">
       <div class="card-image">
@@ -101,7 +101,7 @@ function createProductCard(product) {
 
 // Function untuk menambahkan produk ke dalam halaman HTML
 function addProductsToPage() {
-  const productList = document.querySelector(".list-product");
+  const productList = document.querySelector(".list-product2");
   products.forEach((product) => {
     const productCard = createProductCard(product);
     productList.appendChild(productCard);
