@@ -239,11 +239,13 @@ h1 {
 
 /* list product */
 .list-product {
-  margin: 0 100px;
+  margin: 0 50px;
   display: flex;
   padding-bottom: 20px;
   scroll-snap-type: inline mandatory;
   position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
