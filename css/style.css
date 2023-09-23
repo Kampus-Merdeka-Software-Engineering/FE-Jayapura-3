@@ -7,14 +7,7 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 1200px) {
-}
-
-@media (min-width: 900px) {
-}
-
-@media (max-width: 768px) {
-}
+@media (min-width: 1200px) {}
 
 h1 {
   color: #000;
@@ -99,6 +92,31 @@ h1 {
   position: relative;
   padding: 15px;
   text-decoration: none;
+}
+
+.nav .nav-btn {
+  display: none;
+}
+
+.nav .nav-links {
+  display: inline-flex;
+  justify-content: flex-end;
+  column-gap: 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.nav{
+  justify-content: flex-start;
+}
+
+.nav #nav-check {
+  display: none;
+}
+
+.kosong{
+  display: none;
 }
 
 /*Search-box*/
@@ -424,6 +442,7 @@ h1 {
   display: inline-flex;
   width: 100%;
   margin-top: 15px;
+  padding-bottom: 10px;
 }
 
 .footer-list {
@@ -519,7 +538,7 @@ h2 {
   margin-bottom: 10px;
 }
 
-.filter-section input{
+.filter-section input {
   width: 30px;
   height: 15px;
 }
@@ -551,7 +570,7 @@ input[type="checkbox"] {
   justify-content: center;
 }
 
-.card2{
+.card2 {
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
   padding: 15px;
   border-radius: 35px;
@@ -635,36 +654,36 @@ input[type="checkbox"] {
 }
 
 /* Rating */
-.product-reviews{
+.product-reviews {
   margin-left: 20px;
   margin-top: 10px;
   margin-right: 20px;
 }
 
-h2{
+h2 {
   text-align: center;
 }
 
-.reviews{
+.reviews {
   border: #a5aaaf 1px solid;
   padding: 5px 5px 5px 5px;
 }
 
-.user{
+.user {
   display: flex;
 }
 
-.avatar{
+.avatar {
   width: 30px;
   border-radius: 50px;
 }
 
-.reviewer{
+.reviewer {
   text-align: center;
-  margin: 10px 10px 5px ;
+  margin: 10px 10px 5px;
 }
 
-.star{
+.star {
   color: gold;
 }
 
@@ -739,7 +758,7 @@ input {
 
 /* aboutus */
 
-.heading{
+.heading {
   width: 90%;
   display: flex;
   justify-content: center;
@@ -751,15 +770,15 @@ input {
   margin-right: auto;
 }
 
-.heading h2{
+.heading h2 {
   font-size: 50px;
   color: #000;
   margin-bottom: 25px;
   position: relative;
 }
 
-.heading h2::after{
-  content:"";
+.heading h2::after {
+  content: "";
   position: absolute;
   width: 100%;
   height: 4px;
@@ -768,53 +787,563 @@ input {
   background-color: #fbcd17;
 }
 
-.heading p{
+.heading p {
   font-size: 18px;
   color: #666;
   margin-bottom: 35px;
 }
 
-.content2{
+.content2 {
   padding: 20px;
 }
 
-.about{
+.about {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap:wrap
+  flex-wrap: wrap
 }
 
-.about-image{
-  flex:1;
+.about-image {
+  flex: 1;
   margin-right: 40px;
   overflow: hidden;
 }
 
-.about-image img{
+.about-image img {
   max-width: 100%;
   height: auto;
   display: block;
   transition: 0.5s ease;
 }
 
-.about-image:hover img{
+.about-image:hover img {
   transform: scale(1.2);
 }
 
-.about-content{
+.about-content {
   flex: 1;
 }
 
-.about-content h2{
+.about-content h2 {
   font-size: 23px;
   margin-bottom: 15px;
-  color: #333;  
+  color: #333;
 }
 
-.about-content p{
+.about-content p {
   font-size: 18px;
   line-height: 1.5;
-  color:#666;
+  color: #666;
   text-align: justify;
+}
+
+/* Tambahkan CSS di bawah ini untuk layar dengan lebar maksimum 900px */
+
+@media (max-width: 900px) {
+
+  /* HEADER */
+  .header {
+    height: auto;
+    padding: 10px;
+    display: flex;
+  }
+
+  .header a img {
+    width: auto;
+  }
+
+  .header h1 {
+    padding-left: 25px;
+    font-size: 20px;
+  }
+
+  .menu {
+    margin-top: 5px;
+  }
+
+  .menu a {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  /* bar */
+  .bar {
+    padding-top: 50px;
+    min-height: 300px;
+    text-align: center;
+  }
+
+  .section {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* collection */
+
+  .collection-card {
+    height: 200px;
+    width: 200px;
+  }
+
+  .card-title {
+    transform: translateY(-15px);
+    font-size: 18px;
+  }
+
+  .collection-card .btn-secondary {
+    transform: translateY(5px);
+  }
+
+  .collection-card .btn span {
+    font-size: 14px;
+    padding: 4px 20px;
+  }
+
+  .has-scrollbar {
+    justify-content: left;
+  }
+
+  /* product */
+  .list-product {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .card{
+    width: 240px;
+    min-width: 240px;
+  }
+
+  /* recommendations */
+.img-app{
+  height: 400px;
+}
+
+  .special-product {
+    white-space: nowrap;
+  }
+  .special-product li {
+    padding: 0;
+  }
+
+  .special .section-title {
+    font-size: 20px;
+  }
+
+  .product-item .card{
+    width: 230px;
+    min-width: 230px;
+  }
+
+  /* footer */
+  .footer-brand h1 {
+    margin-left: 36px;
+    text-align: center;
+    width: 40%;
+    font-size: 25px;
+  }
+
+  .social-list {
+    margin-right: 30px;
+    justify-content: right;
+    margin-top: 25px;
+    margin-left: 57%;
+  }
+
+  .footer-list {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-bottom {
+    height: 20px;
+  }
+  
+  .footer-bottom ul {
+    margin-left: 62px;
+    margin-right: auto;
+  }
+  
+  .footer-bottom li {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  /* CSS product.html */
+  /* sidebar page product */
+
+  .content {
+    flex: 1;
+    padding: 10px;
+  }
+
+  /* list product2 */
+  .list-product2 {
+    margin: 0;
+    justify-content: center;
+    padding-top: 80px;
+  }
+
+  .card2{
+    width: 240px;
+    min-width: 240px;
+  }
+
+  /* detail-product */
+  .detail-product {
+    padding-top: 80px;
+  }
+
+  .product-image{
+    width: 300px;
+    height: 300px;
+  }
+
+  .product-image img{
+    width: 300px;
+  }
+
+  .product-details h1{
+    font-size: 25px;
+  }
+
+  .product-details p{
+    font-size: 16px;
+  }
+
+  .product-details label{
+    font-size: 16px;
+  }
+
+  .con-input-btns button{
+    width: 25px;
+    height: 25px;
+  }
+
+  .add {
+    width: 140px;
+    height: 35px;
+  }
+
+  .con-input-btns input {
+    width: 80px;
+    height: 25px;
+  }
+
+  /* Rating */
+  .product-reviews {
+    margin: 10px;
+  }
+
+  /* Contact */
+  .main {
+    padding: 20px;
+    margin-bottom: 90px;
+  }
+
+  .contact-container,
+  .contact-form {
+    width: 100%;
+    padding-top: 60px;
+  }
+
+  .contact-info p{
+    font-size: 14px
+  }
+
+  .contact-form {
+    width: 500px;
+  }
+
+  #name {
+    width: 275px;
+  }
+  
+  #email {
+    width: 275px;
+  }
+  
+  #phone,
+  #message {
+    width: 500px;
+  }
+
+  /* aboutus */
+  .heading h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .about-image {
+    margin-right: 0;
+  }
+
+  .about-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+}
+
+
+/* Tambahkan CSS di bawah ini untuk layar dengan lebar maksimum 768px */
+
+@media (max-width: 768px) {
+
+  /* Header */
+  .header {
+    height: auto;
+    flex-direction: column;
+  }
+
+  /* Bar */
+  .bar {
+    min-height: auto;
+    text-align: center;
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .menu{
+    margin:5px 10px 0px 10px;
+  }
+
+  .menu a{
+    margin: 0px 5px 0px 5px;
+  }
+
+.section{
+  margin-right: 100px;
+  padding-left: 50px;
+}
+
+  .section h1 {
+    font-size: 20px;
+  }
+
+  .section p {
+    font-size: 12px;
+  }
+
+  .shop-now {
+    width: 80px;
+    font-size: 11px;
+  }
+
+  /* Collection */
+  .collection-card {
+    height: 150px;
+    width: 150px;
+  }
+
+  .card-title {
+    transform: translateY(-15px);
+    font-size: 14px;
+  }
+
+  .collection-card .btn-secondary {
+    transform: translateY(13px);
+  }
+
+  .collection-card .btn span {
+    font-size: 12px;
+    padding: 3px 14px;
+  }
+
+  .has-scrollbar {
+    display:flex;
+    gap: 1;
+    padding-bottom: 0;
+  }
+
+  /* List Product */
+  .list-product {
+    margin: 0;
+    flex-direction: flex;
+  }
+
+  .card{
+    width: 240px;
+    min-width: 240px;
+  }
+
+  .poster h1{
+    font-size: 20px;
+  }
+
+  h2{
+    font-size: 14px;
+  }
+
+  .poster{
+    transform: translateX(-275px);
+    padding-bottom: 50px;
+  }
+
+  .img-app{
+    height:370px ;
+  }
+
+  /* Recommendations */
+  .special .recommendations .special-product {
+    margin-left: 0;
+  }
+
+  /* Footer */
+  .footer-brand h1 {
+    font-size: 20px;
+  }
+
+  .footer-list {
+    font-size: 14px;
+  }
+
+.newsletter-form input {
+    width: 170px;
+    margin-bottom: 5px;
+    font-size: 10px;
+    padding-left: 5px;
+  }
+
+  .footer-bottom {
+    height: 20px;
+  }
+  
+  .footer-bottom ul {
+    margin-left: 85px;
+    margin-right: auto;
+  }
+  
+  .footer-bottom li {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  /* Product.html */
+  .product-container {
+    flex-direction: flex;
+  }
+
+  .sidebar {
+    padding-top: 100px;
+  }
+
+  .content {
+    flex: 1;
+    padding: 10px;
+  }
+
+  /* list product2 */
+  .list-product2 {
+    justify-content: center;
+    padding-top: 90px;
+  }
+
+  .card2{
+    width: 10px;
+    min-width: 200px;
+  }
+  .card2 .card-image {
+    height: 100px;
+  }
+  
+  .card2 .card-image img {
+    width: 100px;
+    z-index: 10;
+    transition: all 0.25s ease;
+  }
+
+  /* detail-product */
+  .detail-product {
+    padding-top: 100px;
+  }
+
+  .product-image{
+    width: 300px;
+    height: 300px;
+  }
+
+  .product-image img{
+    width: 300px;
+  }
+
+  .product-details h1{
+    font-size: 25px;
+  }
+
+  .product-details p{
+    font-size: 14px;
+  }
+
+  .product-details label{
+    font-size: 14px;
+  }
+
+  .product-details select {
+    height: 30px;
+    width: 100px;
+  }
+
+  .con-input-btns button{
+    width: 25px;
+    height: 25px;
+  }
+
+  .add {
+    width: 140px;
+    height: 35px;
+  }
+
+  /* Contact */
+.main{
+  display:inline-block;
+}
+
+  .contact-container,
+  .contact-form {
+    width: 100%;
+    padding-top: 80px;
+  }
+
+  .contact-info{
+  margin: 10px 60px;
+  }
+
+  #name,
+  #email,
+  #phone,
+  #message {
+    width: 100%;
+  }
+
+  .heading h2{
+    padding-top: 20px;
+  }
+
+  /* About Us */
+  .about-image {
+    margin-right: 0;
+  }
+
+  .about-content h2 {
+    font-size: 16px;
+  }
+
+.about-content p{
+  font-size: 12px;
+}
+
+  .about-image img {
+    transform: scale(1);
+  }
 }
