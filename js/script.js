@@ -8,7 +8,6 @@ function toggleIcon(iconId, currentClass, newClass, newColor) {
     } else {
         icon.classList.remove(newClass);
         icon.classList.add(currentClass);
-        // Anda dapat menghapus pengaturan warna ini jika ingin mempertahankan warna asli
         icon.style.color = "#ff0000"; 
     }
 }

@@ -48,7 +48,7 @@ function createSizeOptions(sizes) {
 function addToCart(productName, productPrice) {
   const size = document.getElementById("size").value;
   const quantity = document.getElementById("quantity").value;
-  // Lakukan logika untuk menambahkan produk ke keranjang Anda di sini.
+  // Lakukan logika untuk menambahkan produk ke keranjang di sini.
 }
 
 document.addEventListener("DOMContentLoaded", function () {
