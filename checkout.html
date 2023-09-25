@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="css/style.css">  
+    <title>Contact</title>
+    <!-- eksternal css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/f295ae19df.js" crossorigin="anonymous"></script>
     <!-- bootstrap -->
@@ -14,6 +16,7 @@
 </head>
 
 <body>
+    <!-- header -->
     <header>
         <h1 class="logo">Walkwise. Co</h1>
         <div class="menu">
@@ -36,32 +39,75 @@
             </div>
         </div>
     </header>
-    <!--About Us-->
-    <div class="heading">
-        <h2>About Us</h2>
-    </div>
-    <div class="content2">
-        <section class="about">
-            <div class="about-image">
-                <img src="https://img.freepik.com/free-photo/low-angle-view-skyscrapers_1359-1106.jpg"
-                    alt="company photo">
-            </div>
-            <div class="about-content">
-                <h2>Walkwise.Co</h2>
-                <p>As one of the official distributors in the shoe industry, the Walkwise.Co has been dedicated to
-                    providing high quality shoes that are not only comfortable but also stylish. With more than two
-                    decades of experience, we have become the first choice of customers around the world looking for
-                    quality, innovation and cool, elegant designs in shoes.</p>
-                <br>
-                <h2>Vision</h2>
-                <p>Our vision is to be a global footwear distributor known for product innovation, sustainability and
-                    exceptional customer service. We are committed to continuing to meet our customers' needs and being
-                    an agent of positive change in the footwear industry.</p>
-            </div>
-        </section>
-    </div>
 
-    <!--Footer-->
+    <!-- cart -->
+    <main>
+        <div class="small-container cart-page">
+
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Size</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="images/product-11.png">
+                                <p>Running Sneaker Shoes</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>42</td>
+                    <td><input class="qty" type="number" value="1"></td>
+                    <td>$99</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="images/product-9.png">
+                                <p>Running Sneaker Shoes</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>42</td>
+                    <td><input class="qty" type="number" value="1"></td>
+                    <td>$99</td>
+                </tr>
+            </table>
+    
+            <div class="subtotal-price">
+    
+                <table class="subtotal">
+                    <tr>
+                        <td>Subtotal</td>
+                        <td>$198</td>
+                    </tr>
+                    <tr>
+                        <td>Shipping</td>
+                        <td>$20</td>
+                    </tr>
+                    <tr>
+                        <td>Tax</td>
+                        <td>$0</td>
+                    </tr>
+                </table>
+            </div>
+                <div class="total-price">
+                    <table class="total">
+                        <tr>
+                            <td>Total</td>
+                            <td>$218</td>
+                        </tr>
+                    </table>
+                </div>
+    
+    
+        </div>
+    </main>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-top">
             <div class="footer-brand">
@@ -165,6 +211,7 @@
             </div>
         </div>
     </footer>
+            
 
 </body>
 

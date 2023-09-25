@@ -1,0 +1,97 @@
+/*-----cart items ------*/
+
+.cart-page {
+    margin: 80px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-info {
+    display: block;
+    flex-wrap: wrap;
+}
+
+.cart-page th {
+    text-align: left;
+    padding: 12px 62px;
+    color: #787878;
+    background: #fff;
+    font-weight: 500;
+    border-bottom: 2px solid #787878;
+    font-size: 16px;
+    text-align: center;
+}
+
+.cart-page td {
+    text-align: center;
+    font-size: 16px;
+}
+
+.qty{
+    text-align: center;
+}
+
+.main td input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+.main td a {
+    width: 545px;
+    height: 52px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: #000000;
+}
+
+td img {
+    width: 172.96px;
+    height: 166.2px;
+    left: 4.97px;
+    top: 4.97px;
+
+    background: url(image.png);
+}
+
+.subtotal-price {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.subtotal-price table {
+    border-bottom: 5px dashed rgba(0, 0, 0, 0.5);
+    border-color: #787878;
+    width: 100%;
+    max-width: 400px;
+    margin-right: 5%;
+}
+
+.cart-page .subtotal-price .subtotal td{
+    padding: 7px 0px 7px 45px;
+    text-align: left;
+}
+
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-price table {
+    width: 100%;
+    max-width: 400px;
+    margin-right: 5%;
+}
+
+.cart-page .total-price .total td{
+    padding: 7px 0px 7px 45px;
+    text-align: left;
+}
+
