@@ -18,24 +18,26 @@
 
 <body>
     <!-- header -->
-    <header class="header container shadow border-radius">
-        <h1>Walkwise. Co</h1>
-        <div>
-            <nav class="menu">
+    <header>
+        <h1 class="logo">Walkwise. Co</h1>
+        <div class="menu">
+            <input type="checkbox" name="" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label>
+            <nav class="navbar">
                 <a href="index.html" class="active">Home</a>
                 <a href="product.html">Product</a>
                 <a href="contact.html">Contact</a>
                 <a href="aboutus.html">About</a>
-                <!-- search -->
-                <div class="search-box">
-                    <input type="text" placeholder="Search for shoes">
-                    <a class="icon" href="#"><i class="fa-solid fa-magnifying-glass"></i></i></i></a>
-                </div>
-                <span class="vertical-divider"></span>
-                <a class="icon" href="#"><i class="fa-regular fa-heart"></i></a>
-                <a class="icon" href="#"><i class="fa-solid fa-shopping-cart"></i></a>
-                <a class="icon" href="userlogin.html"><i class="fa-regular fa-user"></i></a>
             </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search for shoes">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+            <div class="icons">
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-shopping-cart"></i></a>
+                <a href="userlogin.html"><i class="fa-regular fa-user"></i></a>
+            </div>
         </div>
     </header>
     <main>
@@ -69,7 +71,7 @@
 
                         <li>
                             <div class="collection-card" style="background-image: url('images/Men_collections.png')">
-                                <h3 class="h4 card-title">Men Collections</h3>
+                                <h3 class="h3 card-title">Men Collections</h3>
 
                                 <a href="menshoes.html" class="btn btn-secondary">
                                     <span>View All</span>
@@ -81,7 +83,7 @@
 
                         <li>
                             <div class="collection-card" style="background-image: url('images/Sports_collections.png')">
-                                <h3 class="h4 card-title">Sports Collections</h3>
+                                <h3 class="h3 card-title">Sports Collections</h3>
 
                                 <a href="sportsshoes.html" class="btn btn-secondary">
                                     <span>View All</span>
@@ -93,7 +95,7 @@
 
                         <li>
                             <div class="collection-card" style="background-image: url('images/Women_collections.png')">
-                                <h3 class="h4 card-title">Women Collections</h3>
+                                <h3 class="h3 card-title">Women Collections</h3>
                                 <a href="womenshoes.html" class="btn btn-secondary">
                                     <span>View All</span>
                                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
