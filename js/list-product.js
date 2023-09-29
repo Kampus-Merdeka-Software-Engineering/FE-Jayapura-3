@@ -81,6 +81,8 @@ const special = [
 function createProductCard(product) {
   const card = document.createElement("div");
   card.classList.add("card");
+  card.id = product.id; // Atur atribut id
+
   card.innerHTML = `
     <div class="add-actives">
       <div class="card-image">
@@ -93,8 +95,8 @@ function createProductCard(product) {
         </div>
       </div>
       <a onclick="toggleIcon('heartIcon${product.id}', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
-        <i id="heartIcon${product.id}" class="fa-regular fa-heart" style="color: #ff0000;"></i>
-      </a>
+      <i id="heartIcon${product.id}" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+    </a>
       <a class="icon" href="detail-product.html"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
     </div>
   `;
