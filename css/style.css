@@ -332,9 +332,10 @@ header .menu .fa-bars {
 
 .card-image :hover {
   position: absolute;
-  transform: translate(10px, 20px);
+  transform: scale(1.2);
   z-index: 20;
 }
+
 
 .card-text {
   width: 100%;
@@ -429,6 +430,13 @@ header .menu .fa-bars {
 
 /* footer */
 
+.footer2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .footer-brand {
   background-color: #d3d3d3;
   width: 100%;
@@ -447,7 +455,7 @@ header .menu .fa-bars {
   display: flex;
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 50%;
+  margin-left: 60%;
   margin-right: 40px;
 }
 
@@ -501,6 +509,7 @@ th {
 .newsletter-form input {
   height: 30px;
   width: 250px;
+  padding-left:5px ;
 }
 
 .newsletter-form button {
@@ -522,8 +531,8 @@ th {
 .footer-bottom ul {
   display: flex;
   text-align: center;
-  margin-left: 25%;
-  margin-right: auto;
+  margin-left: 23%;
+  margin-right: 23%;
 }
 
 .footer-bottom li {
@@ -772,11 +781,14 @@ margin-left: 10px;
 #message {
   width: 600px;
   margin-bottom: 10px;
+  padding-left: 5px;
+  padding-top: 5px;
 }
 
 input {
   width: 100px;
   height: 36px;
+  padding-left: 5px;
 }
 
 .btnForm {
@@ -971,6 +983,7 @@ input {
   }
 
   /* footer */
+
   .footer-brand h1 {
     margin-left: 36px;
     text-align: center;
@@ -995,8 +1008,8 @@ input {
   }
 
   .footer-bottom ul {
-    margin-left: 130px;
-    margin-right: auto;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .footer-bottom li {
@@ -1076,6 +1089,7 @@ input {
   .main {
     padding: 20px;
     margin-bottom: 90px;
+    display: block;
   }
 
   .contact-container,
@@ -1084,12 +1098,13 @@ input {
     padding-top: 60px;
   }
 
-  .contact-info p {
-    font-size: 14px
+  .contact-container .contact-info p { 
+    font-size: 15px;
+    margin-left: 12%;
   }
 
-  .contact-form {
-    width: 500px;
+  #contactForm{
+    margin-left: 18%;
   }
 
   #name {
@@ -1102,8 +1117,13 @@ input {
 
   #phone,
   #message {
-    width: 500px;
+    width: 558px;
   }
+
+  .btnForm{
+  margin-left: 40%;
+  width: 150px
+};
 
   /* aboutus */
   .heading h2 {
@@ -1111,8 +1131,13 @@ input {
     margin-bottom: 15px;
   }
 
+  .about{
+    display: block;
+  }
+
   .about-image {
-    margin-right: 0;
+    margin-left: 14%;
+    margin-bottom: 25px;
   }
 
   .about-content h2 {
@@ -1123,7 +1148,12 @@ input {
   .about-content p {
     font-size: 14px;
     margin-bottom: 20px;
-    margin-left: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  h2{
+    padding-top: 10%;
   }
 }
 
@@ -1225,7 +1255,7 @@ header .menu .navbar a{
 
   .has-scrollbar {
     display: flex;
-    gap: 1;
+    margin-left: 6%;
     padding-bottom: 0;
   }
 
@@ -1380,9 +1410,15 @@ header .menu .navbar a{
     width: 100%;
     padding-top: 80px;
   }
-
+  .contact-container .contact-info p {
+    margin-left: 0;
+  }
   .contact-info {
     margin: 10px 60px;
+  }
+
+  #contactForm{
+    margin-left: 0;
   }
 
   #name,
