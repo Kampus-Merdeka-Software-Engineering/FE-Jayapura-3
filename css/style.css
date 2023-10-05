@@ -645,12 +645,19 @@ input[type="checkbox"] {
   margin: 20px;
 }
 
+.product-details{
+  transform: translateY(-35px);
+}
+
 .product-details h1 {
   margin-bottom: 20px;
+  font-size: 30px;
+
 }
 
 .product-details p {
   margin-bottom: 20px;
+  font-size: 14px;
 }
 
 .product-details select {
@@ -708,16 +715,25 @@ h2 {
 
 .user {
   display: flex;
+  font-size: 14px;
 }
 
 .avatar {
-  width: 30px;
+  width: 40px;
   border-radius: 50px;
 }
 
 .reviewer {
   text-align: center;
   margin: 10px 10px 5px;
+}
+
+.review-text{
+  font-size: 13px;
+}
+
+.rating{
+  font-size: 15px;
 }
 
 .star {
