@@ -1,3 +1,6 @@
+import { getQueryParams } from "/js/lib/url.js";
+import { useFetch } from "/js/lib/fetch.js";
+
 function createProductElement(product) {
   const table = document.createElement("table");
   table.innerHTML = `
@@ -28,7 +31,7 @@ function createProductElement(product) {
               </button>
             </div>
           </div>
-          <button class="add" onclick="addToCart('${product.name}', ${product.price})">Add to Cart</button>
+          <button class="add" id="add-to-cart">Add to Cart</button>
         </div>
       </td>
     </tr>
@@ -45,24 +48,56 @@ function createSizeOptions(sizes) {
   return options;
 }
 
-function addToCart(productName, productPrice) {
+async function addToCart(product) {
   const size = document.getElementById("size").value;
   const quantity = document.getElementById("quantity").value;
-  // Lakukan logika untuk menambahkan produk ke keranjang di sini.
+
+  const { data } = await useFetch("http://localhost:3000/api/cart", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: "Bearer " + localStorage.getItem("token"),
+    },
+    body: JSON.stringify({
+      product_id: product.id,
+      size,
+      quantity,
+    }),
+  });
+
+  if (localStorage.getItem("cart") == null) {
+    localStorage.setItem("cart", JSON.stringify([product]));
+  } else {
+    localStorage.setItem(
+      "cart",
+      JSON.stringify([...JSON.parse(localStorage.getItem("cart")), product])
+    );
+  }
+
+  window.location.href = "/checkout.html";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Objek produk contoh
-  const product = {
-    name: "Running Sneaker Shoes",
-    description: "Deskripsi Produk: Lorem ipsum dolor sit amet...",
-    price: 99.99,
-    sizes: [36, 37, 38, 39, 40, 41, 42, 43],
-    image: "images/product-1.png",
-  };
+document.addEventListener("DOMContentLoaded", async function () {
+  const { id } = getQueryParams();
+
+  const { data } = await useFetch(`http://localhost:3000/api/products/${id}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: "Bearer " + localStorage.getItem("token"),
+    },
+  });
+
+  data.data.sizes = data.data.sizes.split(",");
 
   // Panggil fungsi createProductElement dan tambahkan elemen produk ke dalam kontainer
-  const productElement = createProductElement(product);
+  const productElement = createProductElement(data.data);
   const productContainer = document.getElementById("productContainer");
   productContainer.appendChild(productElement);
+
+  const addBtn = document.querySelector("#add-to-cart");
+
+  addBtn.addEventListener("click", async function () {
+    addToCart(data.data);
+  });
 });

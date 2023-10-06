@@ -1,81 +1,72 @@
-// Data produk dalam bentuk array
-const products = [
-  {
-    id: 1,
-    name: "Nike Air Max",
-    description: "Running Sneaker Shoes",
-    image: "images/product-1.png",
-  },
-  {
-    id: 2,
-    name: "Nike Air Max",
-    description: "Leather Mens Slipper",
-    image: "images/product-2.png",
-  },
-  {
-    id: 3,
-    name: "Nike Air Max",
-    description: "Simple Fabric Shoe",
-    image: "images/product-3.png",
-  },
-  {
-    id: 4,
-    name: "Nike Air Max",
-    description: "Air Jordan 7 Retro",
-    image: "images/product-4.png",
-  },
-  {
-    id: 5,
-    name: "Nike Air Max",
-    description: "Nike Air Max 270 SE",
-    image: "images/product-5.png",
-  },
-  {
-    id: 6,
-    name: "Adidas Air Max",
-    description: "Adidas Sneakers Shoes",
-    image: "images/product-6.png",
-  },
-  {
-    id: 7,
-    name: "Nike Air Max",
-    description: "Nike Basketball shoes",
-    image: "images/product-7.png",
-  },
-  {
-    id: 8,
-    name: "Nike Air Max",
-    description: "Simple Fabric Shoe",
-    image: "images/product-8.png",
-  },
-  {
-    id: 9,
-    name: "Nike Air Max",
-    description: "Running Sneaker Shoes",
-    image: "images/product-9.png",
-  },
-  {
-    id: 10,
-    name: "Nike Air Max",
-    description: "Running Sneaker Shoes",
-    image: "images/product-10.png",
-  },
-  {
-    id: 11,
-    name: "Nike Air Max",
-    description: "Running Sneaker Shoes",
-    image: "images/product-11.png",
-  },
-  {
-    id: 12,
-    name: "Nike Air Max",
-    description: "Running Sneaker Shoes",
-    image: "images/product-12.png",
-  },
-];
+import { getQueryParams } from "/js/lib/url.js";
+import { HTTPErrors } from "/js/lib/auth.js";
+import { useFetch } from "/js/lib/fetch.js";
+import { setQueryParams, removeQueryParams } from "/js/lib/url.js";
+const products = [];
+const carts = localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart"))
+  : [];
+const searchField = document.querySelector("#search-field");
+
+const dailyElement = document.querySelector("#daily");
+const sportElement = document.querySelector("#sports");
+const menElement = document.querySelector("#men");
+const womenElement = document.querySelector("#women");
+const unisexElement = document.querySelector("#unisex");
+const nikeElement = document.querySelector("#nike");
+const adidasElement = document.querySelector("#adidas");
+const reebookElement = document.querySelector("#reebok");
+
+const toggleBtn = (event) => {
+  const id = event.target.id;
+  const name = event.target.name;
+  let query = "";
+  if (event.target.checked === true && name !== "gender") {
+    query = setQueryParams(name, id);
+  } else {
+    query = removeQueryParams(name);
+    if (name === "gender") {
+      query += "&gender=" + id;
+    }
+  }
+  window.location.search = query;
+};
+
+dailyElement.addEventListener("click", toggleBtn);
+sportElement.addEventListener("click", toggleBtn);
+menElement.addEventListener("click", toggleBtn);
+womenElement.addEventListener("click", toggleBtn);
+unisexElement.addEventListener("click", toggleBtn);
+nikeElement.addEventListener("click", toggleBtn);
+adidasElement.addEventListener("click", toggleBtn);
+reebookElement.addEventListener("click", toggleBtn);
+
+document.querySelector("#size36").addEventListener("click", toggleBtn);
+document.querySelector("#size37").addEventListener("click", toggleBtn);
+document.querySelector("#size38").addEventListener("click", toggleBtn);
+document.querySelector("#size39").addEventListener("click", toggleBtn);
+document.querySelector("#size40").addEventListener("click", toggleBtn);
+document.querySelector("#size41").addEventListener("click", toggleBtn);
+document.querySelector("#size42").addEventListener("click", toggleBtn);
+document.querySelector("#size43").addEventListener("click", toggleBtn);
+document.querySelector("#size44").addEventListener("click", toggleBtn);
+
+searchField.addEventListener("keyup", function (event) {
+  const searchValue = event.target.value;
+  console.log(searchValue);
+
+  addProductsToPage(
+    products.filter((product) =>
+      product.name.toLowerCase().includes(searchValue.toLowerCase())
+    )
+  );
+});
+
+console.log(searchField);
 
 // Function untuk membuat daftar produk dalam bentuk card
-function createProductCard(product) {
+export function createProductCard(product) {
+  const isProductInCart = carts.find((cart) => product.id === cart.id);
   const card = document.createElement("div");
   card.classList.add("card2");
   card.innerHTML = `
@@ -89,10 +80,24 @@ function createProductCard(product) {
           <h4>${product.description}</h4>
         </div>
       </div>
-      <a onclick="toggleIcon('heartIcon${product.id}', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
-        <i id="heartIcon${product.id}" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+      <a onclick="toggleIcon('heartIcon${
+        product.id
+      }', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+        <i id="heartIcon${
+          product.id
+        }" class="fa-regular fa-heart" style="color: #ff0000;"></i>
       </a>
-      <a class="icon" href="detail-product.html"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+      <a class="icon" href='${
+        isProductInCart
+          ? "checkout.html"
+          : "detail-product.html?id=" + product.id
+      }'>
+      ${
+        isProductInCart
+          ? '<i class="bi bi-bag-check-fill"></i>'
+          : ' <i class="bi bi-cart3" style="color: #93019d;"></i>'
+      }
+     </a>
     </div>
   `;
 
@@ -100,18 +105,81 @@ function createProductCard(product) {
 }
 
 // Function untuk menambahkan produk ke dalam halaman HTML
-function addProductsToPage() {
+async function addProductsToPage(data) {
   const productList = document.querySelector(".list-product2");
-  products.forEach((product) => {
+  productList.innerHTML = "";
+  data.forEach((product) => {
     const productCard = createProductCard(product);
     productList.appendChild(productCard);
   });
 }
 
 // Event listener untuk halaman telah dimuat sepenuhnya
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("Halaman telah dimuat sepenuhnya.");
+document.addEventListener("DOMContentLoaded", async function () {
+  const { data } = await useFetch("http://localhost:3000/api/products", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: "Bearer " + localStorage.getItem("token"),
+    },
+  }).catch((error) => HTTPErrors(error.response));
 
-  // Panggil fungsi untuk menambahkan produk ke halaman HTML
-  addProductsToPage();
+  products.push(...data.data);
+  addProductsToPage(filterProductsByQuery(products));
 });
+
+function filterProductsByQuery(arr) {
+  const { category, brand, gender, size } = getQueryParams();
+
+  return filterProducts(category, brand, gender, size);
+}
+
+function filterProducts(
+  category = false,
+  brand = false,
+  gender = false,
+  size = false
+) {
+  let arr = products;
+  if (category) {
+    console.log(category);
+    const cate = category.split(",");
+
+    cate.forEach((cat) => {
+      console.log(cat);
+      document.getElementById(cat).checked = true;
+    });
+
+    arr = arr.filter((product) => cate.includes(product.category));
+  }
+
+  if (brand) {
+    const cate = brand.split(",");
+
+    cate.forEach((cat) => {
+      document.getElementById(cat).checked = true;
+    });
+
+    arr = arr.filter((product) => cate.includes(product.brand));
+  }
+
+  if (gender) {
+    gender = gender.split(",")[0];
+    document.getElementById(gender).checked = true;
+    arr = arr.filter((product) => product.gender === gender);
+  }
+
+  if (size) {
+    size = size.split(",");
+    size.forEach((s) => {
+      document.getElementById(s).checked = true;
+      arr = arr.filter((product) =>
+        product.sizes.split(",").includes(s.replace("size", ""))
+      );
+    });
+  }
+
+  console.log(arr);
+
+  return arr;
+}

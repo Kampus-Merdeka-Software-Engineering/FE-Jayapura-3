@@ -13,7 +13,6 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="js/script.js"></script>
-    <script src="js/sport.js"></script>
 </head>
 
 <body>
@@ -58,7 +57,6 @@
                     <li><label><input type="checkbox"> Nike</label></li>
                     <li><label><input type="checkbox"> Adidas</label></li>
                     <li><label><input type="checkbox"> Puma</label></li>
-                    <li><label><input type="checkbox"> Reebok</label></li>
                     <!-- Tambahkan brand lainnya sesuai kebutuhan -->
                 </ul>
             </div>
@@ -72,15 +70,168 @@
                     <li><label><input type="checkbox"> 41</label></li>
                     <li><label><input type="checkbox"> 42</label></li>
                     <li><label><input type="checkbox"> 43</label></li>
-                    <li><label><input type="checkbox"> 44</label></li>
                 </ul>
             </div>
         </aside>
 
         <main class="content">
-            <section>
-                <ul class="sport-product list-product2">
-                </ul>            
+            <section class="list-product2">
+                <ul>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/Sports Shoes/nike1.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p> Nike Infinity</p>
+                                        <h4>Road Running Shoes</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon1', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon1" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="detail-product.html"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/Sports Shoes/nike2.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p> Nike Alphafly</p>
+                                        <h4>Road Racing Shoes</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon2', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon2" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="detail-product2.html"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/Sports Shoes/nike3.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p> Nike InfinityRN SE</p>
+                                        <h4>Road Running Shoes</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon3', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon3" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="#"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/Sports Shoes/puma1.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p>Puma RUN NITRO</p>
+                                        <h4>Running Shoes</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon4', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon4" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="#"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/Sports Shoes/puma2.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p> Puma Fuse 2.0</p>
+                                        <h4>Running Shoes</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon5', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon5" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="#"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/Sports Shoes/puma3.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p> Puma Training Infusion</p>
+                                        <h4>Running Shoes</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon6', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon6" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="#"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/Sports Shoes/adidas1.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p> Adidas x Stella Mccartney</p>
+                                        <h4>Running Shoes</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon7', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon7" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="#"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <div class="add-actives">
+                                <div class="card-image">
+                                    <img src="images/Sports Shoes/adidas2.png" alt="" class="img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <p> Adidas Duramo Speed</p>
+                                        <h4>Running shoes</h4>
+                                    </div>
+                                </div>
+                                <a onclick="toggleIcon('heartIcon8', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+                                    <i id="heartIcon8" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+                                </a>
+                                <a class="icon" href="#"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </section>
         </main>
     </div>

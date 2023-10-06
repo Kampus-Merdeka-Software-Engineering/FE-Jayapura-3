@@ -1,77 +1,142 @@
-var cartData = [
-    {
-        imageSrc: "images/product-11.png",
-        item: "Running Sneaker Shoes",
-        size: 42,
-        quantity: 1,
-        price: 99
+import { useFetch } from "/js/lib/fetch.js";
+
+const carts = localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart"))
+  : [];
+
+const buyBtn = document.querySelector("#buy-btn");
+
+buyBtn.addEventListener("click", async () => {
+  const { data } = await useFetch("http://localhost:3000/api/cart/checkout", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: "Bearer " + localStorage.getItem("token"),
     },
-    {
-        imageSrc: "images/product-9.png",
-        item: "Running Sneaker Shoes",
-        size: 42,
-        quantity: 1,
-        price: 99
-    }
-];
+  }).catch((err) => console.log(err));
 
-function addProductsToPage() {
-    // Mengisi tabel keranjang belanja dengan data dari array
-    var cartTable = document.getElementById("cart-table");
-    var subtotal = 0;
+  if (data.success) {
+    alert("Checkout Success");
+    localStorage.removeItem("cart");
 
-    cartData.forEach(function (itemData) {
-        var row = cartTable.insertRow(-1);
+    localStorage.getItem("recent-purchases")
+      ? localStorage.setItem(
+          "recent-purchases",
+          JSON.stringify([
+            ...JSON.parse(localStorage.getItem("recent-purchases")),
+            ...carts,
+          ])
+        )
+      : localStorage.setItem("recent-purchases", JSON.stringify(carts));
+    window.location.replace("/index.html");
+  }
+});
 
-        // Kolom Gambar dan Nama Barang
-        var imageAndNameCell = row.insertCell(0);
-        
-        // Buat sebuah div untuk menggabungkan gambar dan nama barang
-        var imageAndNameDiv = document.createElement("div");
+async function deleteFromCart(id) {
+  const { data } = await useFetch("http://localhost:3000/api/cart/", {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: "Bearer " + localStorage.getItem("token"),
+    },
+    body: JSON.stringify({ product_id: id }),
+  }).catch((err) => console.log(err));
 
-        // Tambahkan gambar
-        var image = document.createElement("img");
-        image.src = itemData.imageSrc;
-        imageAndNameDiv.appendChild(image);
-
-        // Tambahkan nama barang
-        var itemName = document.createElement("p");
-        itemName.textContent = itemData.item;
-        imageAndNameDiv.appendChild(itemName);
-
-        // Tambahkan div ke dalam kolom
-        imageAndNameCell.appendChild(imageAndNameDiv);
-
-        // Kolom Ukuran
-        var sizeCell = row.insertCell(1);
-        sizeCell.innerHTML = itemData.size;
-
-        // Kolom Kuantitas
-        var quantityCell = row.insertCell(2);
-        quantityCell.innerHTML = '<input class="qty" type="number" value="' + itemData.quantity + '">';
-
-        // Kolom Harga
-        var priceCell = row.insertCell(3);
-        priceCell.innerHTML = '$' + itemData.price;
-
-        subtotal += itemData.price;
-    });
-
-    // Mengisi subtotal, pengiriman, dan pajak
-    var shipping = 20;
-    var tax = 0;
-    var total = subtotal + shipping + tax;
-
-    document.getElementById("subtotal").textContent = '$' + subtotal;
-    document.getElementById("shipping").textContent = '$' + shipping;
-    document.getElementById("tax").textContent = '$' + tax;
-    document.getElementById("total").textContent = '$' + total;
+  if (data.success) {
+    localStorage.setItem(
+      "cart",
+      JSON.stringify(
+        JSON.parse(localStorage.getItem("cart"))?.filter(
+          (product) => product.id !== id
+        )
+      )
+    );
+    window.location.reload();
+  }
 }
 
+async function updateQuantity(id, quantity) {
+  const { data } = await useFetch("http://localhost:3000/api/cart/", {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: "Bearer " + localStorage.getItem("token"),
+    },
+    body: JSON.stringify({ product_id: id, quantity: quantity }),
+  }).catch((err) => console.log(err));
 
+  if (data.success) {
+    window.location.reload();
+  }
+}
 
-// Event listener untuk halaman telah dimuat sepenuhnya
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Halaman telah dimuat sepenuhnya.");
-    addProductsToPage(); // Panggil fungsi untuk menambahkan produk ke halaman HTML
-});
+const createProductCheckout = (product) => {
+  return `
+   <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="${product.image}">
+                                <p>Running Sneaker Shoes</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>${product.size}</td>
+                    <td><input id="qty${product.id}" class="qty" type="number" value="${product.quantity}"></td>
+                    <td>$${product.price}</td>
+                    <td><button id="product${product.id}" class="btn btn-danger">Remove</button></td>
+                </tr>
+`;
+};
+
+const renderPricing = async () => {
+  const subTotal = document.getElementById("sub-total");
+  const tax = document.getElementById("tax");
+  const shipping = document.getElementById("shipping");
+  const total = document.getElementById("total");
+
+  const { data } = await useFetch("http://localhost:3000/api/cart/total", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: "Bearer " + localStorage.getItem("token"),
+    },
+  }).catch((err) => console.log(err));
+
+  shipping.innerText = "$" + data.shipementCost;
+  subTotal.innerText = "$" + data.subTotal;
+  tax.innerText = "$" + data.tax;
+  total.innerText = "$" + data.total;
+};
+
+window.onload = async () => {
+  const { data } = await useFetch("http://localhost:3000/api/cart", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: "Bearer " + localStorage.getItem("token"),
+    },
+  }).catch((err) => console.log(err));
+
+  const cartTable = document.getElementById("cart-table");
+
+  console.log(data.data);
+
+  data.data.forEach((product) => {
+    const productElement = createProductCheckout(product);
+
+    cartTable.insertAdjacentHTML("beforeend", productElement);
+    document
+      .getElementById(`product${product.id}`)
+      .addEventListener("click", () => {
+        deleteFromCart(product.id);
+      });
+
+    document
+      .getElementById(`qty${product.id}`)
+      .addEventListener("change", (e) => {
+        updateQuantity(product.id, e.target.value);
+      });
+  });
+
+  return renderPricing();
+};
