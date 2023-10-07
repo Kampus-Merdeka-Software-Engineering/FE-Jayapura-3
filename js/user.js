@@ -1,5 +1,4 @@
 import { useFetch } from "/js/lib/fetch.js";
-
 const carts = localStorage.getItem("cart");
 const recents = localStorage.getItem("recent-purchases");
 
@@ -39,7 +38,7 @@ export function createProductCard(product) {
       <a class="icon" style="text-decoration:none;color:black" href='${
         "detail-product.html?id=" + product.id
       }'>Buy Again
-      </a>
+     </a>
     </div>
   `;
 
