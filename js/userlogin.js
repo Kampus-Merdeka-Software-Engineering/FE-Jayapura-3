@@ -78,6 +78,6 @@ formSignin.addEventListener("submit", async (e) => {
 
     if (response.ok) {
         localStorage.setItem("token", data.token);
-        return window.location.replace("/index.html");
+        return window.location.replace("./index.html");
     }
 });

@@ -50,7 +50,7 @@
 //   },
 // ];
 
-import { useFetch } from "/js/lib/fetch.js";
+import { useFetch } from "/js/lib/fetch";
 
 const carts = localStorage.getItem("cart")
   ? JSON.parse(localStorage.getItem("cart"))
