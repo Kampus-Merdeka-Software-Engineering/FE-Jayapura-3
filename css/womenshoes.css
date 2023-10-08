@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 2;
+    text-decoration: none;
+    list-style: none;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+  }
+
+  
+  .shadow {
+    box-shadow: 0px 0px 100px 0px rgba(15, 13, 1, 0.414);
+  }
+  
+  .border-radius {
+    border-radius: 0px;
+  }
+  
+  .poster {
+    margin-left: 1px;
+  }
+  
+  .poster h1 {
+    font-size: 30px;
+  }
+  
+  /* CSS index.html */
+  
+  /* bar */
+  .bar {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    min-height: 450px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .section {
+    margin-left: 150px;
+  }
+  
+  .section h1 {
+    font-size: 30px;
+  }
+  
+  .bar-title {
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .bar-text {
+    font-size: 12px;
+    line-height: 1.8;
+    max-width: 46ch;
+    margin-bottom: 25px;
+  }
+  
+  .shop-now {
+    width: 120px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+  }
+  
+  .shop-now:hover {
+    background-color: #fbcd17;
+  }
+  
+  /* collection */
+  .collection-card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 45px 25px;
+  }
+  
+  .has-scrollbar {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: inline mandatory;
+    position: relative;
+  }
+  
+  .collection-card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 45px 25px;
+    width: 360px;
+  }
+  
+  .btn span {
+    border: 1px solid black;
+    padding: 8px 40px;
+    border-radius: 30px;
+    color: #000;
+  }
+  
+  .btn span:hover {
+    background-color: rgba(228, 226, 226, 0);
+  }
+  
+  /* product */
+  
+  .product {
+    text-align: center;
+  }
+  
+  .product p {
+    font-size: 14px;
+    color: #000;
+  }
+  
+  .btn-All {
+    margin-top: 20px;
+    background-color: #f45151;
+    color: white;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+  }
+  
+  .btn-All:hover {
+    font-weight: bold;
+  }
+  
+  /* list product */
+  .list-product {
+    margin: 0 100px;
+    display: flex;
+    padding-bottom: 20px;
+    scroll-snap-type: inline mandatory;
+    position: relative;
+  }
+  
+  .card {
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 35px;
+    width: 200px;
+    min-width: 210px;
+    position: relative;
+    margin: 0px 15px;
+    background: rgb(255, 255, 255);
+    scroll-snap-align: center;
+    transition: all 0.25s ease;
+    border: 2px solid #363636;
+  }
+  
+  .add-active {
+    box-shadow: 0px 10px 30px 0px rgba(21, 21, 21, 0.2);
+    border: 2px solid #fea01a;
+  }
+  
+  .add-active {
+    display: none;
+  }
+  
+  .add-active {
+    transform: scale(1.15);
+  }
+  
+  .add-active {
+    display: flex;
+  }
+  
+  .card-image {
+    width:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 170px;
+    border-radius: 30px;
+  }
+  
+  .card-image img {
+    width: 160px;
+    z-index: index 0;
+    transition: all 0.25s ease;
+  }
+  
+  .card-image :hover {
+    position: absolute;
+    transform: scale(1.2);
+    z-index: 20;
+  }
+  
+  .card-text {
+    width: 100%;
+    padding: 15px 0px;
+    opacity: 1;
+    font-size: 0.8rem;
+  }
+  
+  .card-text h4 {
+    padding: 5px 0px;
+  }
+  
+  .img {
+    margin-bottom: auto;
+  }
+
+  .img-app {
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+  
+  .special .section-title {
+    margin-block: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .special .section-title .text {
+    min-width: max-content;
+  }
+  
+  .special .section-title .line {
+    width: 100%;
+    height: 1px;
+  }
