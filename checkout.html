@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- eksternal css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/f295ae19df.js" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="js/script.js"></script>
+    <script type="module" src="/js/checkout.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h1 class="logo">Walkwise. Co</h1>
+        <div class="menu">
+            <input type="checkbox" name="" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label>
+            <nav class="navbar">
+                <a href="index.html" class="active">Home</a>
+                <a href="product.html">Product</a>
+                <a href="contact.html">Contact</a>
+                <a href="aboutus.html">About</a>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search for shoes">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+            <div class="icons">
+                <a href="favorit.html"><i class="fa-regular fa-heart"></i></a>
+                <a href="checkout.html"><i class="fa-solid fa-shopping-cart"></i></a>
+                <a href="user.html"><i class="fa-regular fa-user"></i></a>
+                     <a onclick="logout()" href="userlogin.html"><i class="fa fa-right-from-bracket"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- cart -->
+    <main>
+        <div class="small-container cart-page">
+
+            <table id="cart-table">
+                <tr>
+                    <th>Item</th>
+                    <th>Size</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+             
+            </table>
+    
+            <div class="subtotal-price">
+                <table class="subtotal">
+                    <tr>
+                        <td>Subtotal</td>
+                        <td id="sub-total"></td>
+                    </tr>
+                    <tr>
+                        <td>Shipping</td>
+                        <td id="shipping"></td>
+                    </tr>
+                    <tr>
+                        <td>Tax</td>
+                        <td id="tax"></td>
+                    </tr>
+                </table>
+            </div>
+                <div class="total-price">
+                    <table class="total">
+                        <tr>
+                            <td>Total</td>
+                            <td id="total"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                           <td>
+                             <button id="buy-btn" style="    width: 150px;
+    height: 40px;
+    background-color: #6450b6;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;">Buy</button>
+                           </td>
+                        </tr>
+                    </table>
+                </div>
+    
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h1>Walkwise. Co</h1>
+                <ul class="social-list">
+                    <li>
+                        <a class="icon2" href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a class="icon2" href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a class="icon2" href="#"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="footer-link-box">
+            <ul class="footer-list">
+                <li>
+                    <p class="footer-list-title">Contact Us</p>
+                </li>
+                <li>
+                    <address class="footer-link">
+                        <a class="icon3" href="#"><i class="bi bi-geo-alt" style="color: #fff;"></i></a>
+                        <span class="footer-link-text">
+                            2751 S Parker Rd, Aurora, CO 80014, United States
+                        </span>
+                    </address>
+                </li>
+                <li>
+                    <a href="tel:+557343673257" class="footer-link">
+                        <a class="icon3" href="#"><i class="bi bi-telephone" style="color: #fff;"></i></a>
+                        <span class="footer-link-text">+557343673257</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:Walkwise@help.com" class="footer-link">
+                        <a class="icon3" href="#"><i class="bi bi-envelope" style="color: #fff;"></i></a>
+                        <span class="footer-link-text">Walkwise@help.com</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="footer-list">
+                <p class="footer-list-title">Opening Time</p>
+                <table class="footer-table">
+                    <tbody>
+                        <tr class="table-row">
+                            <th class="table-head" scope="row">Mon</th>
+                            <td style="font-weight: bold;">:</td>
+                            <td class="table-data">8AM - 8PM</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head" scope="row">Tue </th>
+                            <td style="font-weight: bold;">:</td>
+                            <td class="table-data">8AM - 8PM</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head" scope="row">Wed</th>
+                            <td style="font-weight: bold;">:</td>
+                            <td class="table-data">8AM - 8PM</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head" scope="row">Fri</th>
+                            <td style="font-weight: bold;">:</td>
+                            <td class="table-data">8AM - 8PM</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head" scope="row">Sat</th>
+                            <td style="font-weight: bold;">:</td>
+                            <td class="table-data">8AM - 8PM</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="table-head" scope="row">Sun</th>
+                            <td style="font-weight: bold;">:</td>
+                            <td class="table-data">Closed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="footer-list">
+                <p class="footer-list-title">Email</p>
+                <form action="" class="newsletter-form">
+                    <input type="email" name="email" required placeholder="Enter Your Email Address"
+                        class="newsletter-input">
+                    <br>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <ul>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Terms of Service</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+            
+
+</body>
+
+</html>
