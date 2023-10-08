@@ -438,17 +438,16 @@ header .menu .fa-bars {
 }
 
 .footer-brand {
-  background-color: #d3d3d3;
+  background-color: #a5aaaf;
   width: 100%;
   height: 80px;
   display: flex;
 }
 
-.footer-brand h1 {
+.footer-brand img {
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 70px;
-  font-size: 30px;
 }
 
 .social-list {
