@@ -6,7 +6,7 @@ export const useFetch = (url, options) => {
           response.json().then((data) => resolve({ response, data }));
         } else if (response.status === 401) {
           localStorage.removeItem("token");
-          throw window.location.replace("/userLogin.html");
+          throw window.location.replace("userLogin.html");
         } else {
           response.json().then((data) => reject({ response, data }));
         }
