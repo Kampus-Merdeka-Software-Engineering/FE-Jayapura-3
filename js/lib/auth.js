@@ -2,7 +2,7 @@ export const checkAuth = (url, options) => {
   if (localStorage.getItem("token")) {
     return true;
   }
-  return window.location.replace("userLogin.html");
+  return window.location.replace("userlogin.html?");
 };
 
 checkAuth();
