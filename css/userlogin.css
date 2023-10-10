@@ -161,6 +161,8 @@ form.sign-up-form{
     font-size: 15px;
     font-weight: 400;
     color: black;
+    border-bottom-right-radius:20px ;
+    border-top-right-radius: 20px;
 }
 
 .btn{
