@@ -10,7 +10,7 @@ formSignup.addEventListener("submit", async (e) => {
   const username = formSignup["username"].value;
 
   const { response, data } = await useFetch(
-    "http://localhost:3000/api/user/register",
+    "https://be-jayapura-3-production.up.railway.app/api/user/register",
     {
       method: "POST",
       body: JSON.stringify({
@@ -41,7 +41,7 @@ formSignin.addEventListener("submit", async (e) => {
   const password = formSignin["password"].value;
 
   const { response, data } = await useFetch(
-    "http://localhost:3000/api/auth/login",
+    "https://be-jayapura-3-production.up.railway.app/api/auth/login",
     {
       method: "POST",
       body: JSON.stringify({

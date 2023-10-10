@@ -52,7 +52,7 @@ async function addToCart(product) {
   const size = document.getElementById("size").value;
   const quantity = document.getElementById("quantity").value;
 
-  const { data } = await useFetch("http://localhost:3000/api/cart", {
+  const { data } = await useFetch("https://be-jayapura-3-production.up.railway.app/api/cart", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -80,7 +80,7 @@ async function addToCart(product) {
 document.addEventListener("DOMContentLoaded", async function () {
   const { id } = getQueryParams();
 
-  const { data } = await useFetch(`http://localhost:3000/api/products/${id}`, {
+  const { data } = await useFetch(`https://be-jayapura-3-production.up.railway.app/api/products/${id}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

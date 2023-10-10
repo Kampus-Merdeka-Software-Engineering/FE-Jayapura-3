@@ -7,7 +7,7 @@ const carts = localStorage.getItem("cart")
 const buyBtn = document.querySelector("#buy-btn");
 
 buyBtn.addEventListener("click", async () => {
-  const { data } = await useFetch("http://localhost:3000/api/cart/checkout", {
+  const { data } = await useFetch("https://be-jayapura-3-production.up.railway.app/api/cart/checkout", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -33,7 +33,7 @@ buyBtn.addEventListener("click", async () => {
 });
 
 async function deleteFromCart(id) {
-  const { data } = await useFetch("http://localhost:3000/api/cart/", {
+  const { data } = await useFetch("https://be-jayapura-3-production.up.railway.app/api/cart/", {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -56,7 +56,7 @@ async function deleteFromCart(id) {
 }
 
 async function updateQuantity(id, quantity) {
-  const { data } = await useFetch("http://localhost:3000/api/cart/", {
+  const { data } = await useFetch("https://be-jayapura-3-production.up.railway.app/api/cart/", {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -94,7 +94,7 @@ const renderPricing = async () => {
   const shipping = document.getElementById("shipping");
   const total = document.getElementById("total");
 
-  const { data } = await useFetch("http://localhost:3000/api/cart/total", {
+  const { data } = await useFetch("https://be-jayapura-3-production.up.railway.app/api/cart/total", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -109,7 +109,7 @@ const renderPricing = async () => {
 };
 
 window.onload = async () => {
-  const { data } = await useFetch("http://localhost:3000/api/cart", {
+  const { data } = await useFetch("https://be-jayapura-3-production.up.railway.app/api/cart", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

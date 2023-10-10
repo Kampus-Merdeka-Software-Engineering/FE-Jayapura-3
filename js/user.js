@@ -47,7 +47,7 @@ export function createProductCard(product) {
 
 formEdit.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const { data } = await useFetch("http://localhost:3000/api/user", {
+  const { data } = await useFetch("https://be-jayapura-3-production.up.railway.app/api/user", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -66,7 +66,7 @@ formEdit.addEventListener("submit", async (event) => {
 });
 
 window.onload = async () => {
-  const { data } = await useFetch("http://localhost:3000/api/user", {
+  const { data } = await useFetch("https://be-jayapura-3-production.up.railway.app/api/user", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
