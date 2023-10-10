@@ -7,13 +7,6 @@
     box-sizing: border-box;
 }
 
-
-@media (min-width: 1200px) {}
-
-@media (min-width: 900px) {}
-
-@media (max-width: 768px) {}
-
 h1 {
     color: #000;
     font-weight: bold;
@@ -308,4 +301,19 @@ a{
 
 .userlogin.sign-up-mode .left-panel{
     pointer-events: all;
+}
+
+@media (max-width: 450px){
+    .title{
+        font-size: 20px;
+    }
+
+    .input-field{
+        width: 80%;
+    }
+
+    .btn{
+        width: 120px;
+        font-weight: bold;
+    }
 }

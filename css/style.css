@@ -1156,7 +1156,6 @@ input {
   }
 }
 
-
 /* Tambahkan CSS di bawah ini untuk layar dengan lebar maksimum 768px */
 
 @media (max-width: 768px) {
@@ -1299,6 +1298,13 @@ header .menu .navbar a{
   .footer-list {
     font-size: 14px;
   }
+
+  .social-list {
+    margin-right: 10px;
+    justify-content: right;
+    margin-top: 25px;
+    margin-left: 40%;
+}
 
   .newsletter-form input {
     width: 170px;
@@ -1449,6 +1455,7 @@ header .menu .navbar a{
   }
 }
 
+/* Tambahkan CSS di bawah ini untuk layar dengan lebar maksimum 768px */
 @media (max-width: 450px){
 
   html {
@@ -1572,9 +1579,10 @@ header .menu .navbar a{
   }
 
   .social-list{
-    margin-right: 20px;
-    margin-left: 40%;
-
+    margin-right: 5px;
+    margin-left: 10%;
+    justify-content: right;
+    margin-top: 15px;
   }
 
   .footer-list {
