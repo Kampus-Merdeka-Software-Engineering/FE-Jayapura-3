@@ -644,12 +644,19 @@ input[type="checkbox"] {
   margin: 20px;
 }
 
+.product-details{
+  transform: translateY(-35px);
+}
+
 .product-details h1 {
   margin-bottom: 20px;
+  font-size: 30px;
+
 }
 
 .product-details p {
   margin-bottom: 20px;
+  font-size: 14px;
 }
 
 .product-details select {
