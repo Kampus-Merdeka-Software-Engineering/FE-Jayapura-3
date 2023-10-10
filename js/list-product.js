@@ -108,17 +108,17 @@ function createProductCard(product) {
         product.id
       }" class="fa-regular fa-heart" style="color: #ff0000;"></i>
     </a>
-     <a class="icon" href='${
-       isProductInCart
-         ? "checkout.html"
-         : "detail-product.html?id=" + product.id
-     }'>
+    <a class="icon" href='${
+      isProductInCart
+        ? "checkout.html"
+        : "detail-product.html?id=" + product.id
+    }'>
       ${
         isProductInCart
           ? '<i class="bi bi-bag-check-fill"></i>'
           : ' <i class="bi bi-cart3" style="color: #93019d;"></i>'
       }
-     </a>
+    </a>
     </div>
   `;
 

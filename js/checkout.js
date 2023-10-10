@@ -72,19 +72,19 @@ async function updateQuantity(id, quantity) {
 
 const createProductCheckout = (product) => {
   return `
-   <tr>
-                    <td>
-                        <div class="cart-info">
-                            <img src="${product.image}">
-                                <p>Running Sneaker Shoes</p>
-                            </div>
-                        </div>
-                    </td>
-                    <td>${product.size}</td>
-                    <td><input id="qty${product.id}" class="qty" type="number" value="${product.quantity}"></td>
-                    <td>$${product.price}</td>
-                    <td><button id="product${product.id}" class="btn btn-danger">Remove</button></td>
-                </tr>
+  <tr>
+    <td>
+      <div class="cart-info">
+      <img src="${product.image}">
+        <p>Running Sneaker Shoes</p>
+        </div>
+        </div>
+        </td>
+          <td>${product.size}</td>
+          <td><input id="qty${product.id}" class="qty" type="number" value="${product.quantity}"></td>
+          <td>$${product.price}</td>
+          <td><button id="product${product.id}" class="btn btn-danger">Remove</button></td>
+  </tr>
 `;
 };
 

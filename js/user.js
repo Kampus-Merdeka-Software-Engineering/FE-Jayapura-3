@@ -38,7 +38,7 @@ export function createProductCard(product) {
       <a class="icon" style="text-decoration:none;color:black" href='${
         "detail-product.html?id=" + product.id
       }'>Buy Again
-     </a>
+    </a>
     </div>
   `;
 

@@ -97,7 +97,7 @@ export function createProductCard(product) {
           ? '<i class="bi bi-bag-check-fill"></i>'
           : ' <i class="bi bi-cart3" style="color: #93019d;"></i>'
       }
-     </a>
+    </a>
     </div>
   `;
 
